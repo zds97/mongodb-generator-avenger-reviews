@@ -3,9 +3,7 @@ A MongoDB data generator for mocked product reviews
 
 This simple script will generate mock product reviews for testing purposes.
 
-## Installation
-From the folder in which you cloned this repository run the following:
-
+Run the commands from the folder in which you cloned this repository run the following:
 
 ### Setup the environment and get prerequisites
 ```bash
@@ -18,8 +16,14 @@ $ pip install -r requirements.txt
 
 ```bash
 $ python generator.py
-``
+```
 
 ### Stop the generator:
 
 Press ctrl-c
+
+### Deactivate the Python environment
+
+```bash
+$ deactivate
+```
