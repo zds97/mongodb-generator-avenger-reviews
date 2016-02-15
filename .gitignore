@@ -1,0 +1,12 @@
+# Build artifacts.
+*.egg-info
+reports
+build
+dist
+activate
+avenger-generator
+
+# Miscellaneous.
+.DS_Store
+*.log
+*.rdb
