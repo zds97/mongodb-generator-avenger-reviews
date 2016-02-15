@@ -14,8 +14,16 @@ $ pip install -r requirements.txt
 
 ### Run the generator
 
+You can run the script with the preset Avengers list.
+
 ```bash
 $ python generator.py
+```
+
+Or specify the product name to use.
+
+```bash
+$ python generator.py Mulder
 ```
 
 ### Stop the generator:
