@@ -1,30 +1,33 @@
 import datetime, httplib, sys
 import pymongo
+import os
 import uuid, json, random
 from loremipsum import get_paragraph
 from random import randint
 
 settings = {
-    'host': '<mongodb host name goes here>',
-    'database': '<database name>',
-    'username': '<user>',
-    'password': '<password>'
+    'host': str(os.environ.get('HOSTCONNECT')),
+    'database': str(os.environ.get('DATABASE')),
+    'username': str(os.environ.get('USERNAME')),
+    'password': str(os.environ.get('PASSWORD'))
 }
 
 avenger = ""
-avengers = ["Black Widow", "Jarvis", "Iron Man", "Thor", "Hulk", 
-        "Captain America", "Hulk", "Nick Fury", "Pepper Potts", "Hawkeye",
-        "Luke Cage", "Falcon", "Scarlet Witch"]
+avengers = ["Nexus 6", "Nexus 5x", "Nexux 6p", "iPhone 5", "iPhone 6", 
+        "iPhone 7", "Pixel", "Windows Phone", "Galaxy s5", "Galaxy s6",
+        "Galaxy s7", "HTC 10", "LG G5"]
 
 try:
+    print "Connecting to {}/{}".format(settings['host'], settings['database'])
     conn = pymongo.MongoClient("mongodb://{username}:{password}@{host}/{database}".format(**settings))
 except Exception as ex:
     print "Error:", ex
     exit('Failed to connect, terminating.')
 
-
-db = conn.random_data
-
+try:
+    db = conn[settings['database']]
+except Exception as ex:
+    exit('Error {}'.format(ex))
 
 while True:
     if len(sys.argv) > 1:
