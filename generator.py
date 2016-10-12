@@ -15,7 +15,11 @@ settings = {
 avenger = ""
 avengers = ["Nexus 6", "Nexus 5x", "Nexux 6p", "iPhone 5", "iPhone 6", 
         "iPhone 7", "Pixel", "Windows Phone", "Galaxy s5", "Galaxy s6",
-        "Galaxy s7", "HTC 10", "LG G5"]
+        "Galaxy s7", "HTC 10", "LG G5", "Nexus 6", "Nexus 5x", "Pixel",
+        "LG G5", "Galaxy s7", "Pixel", "Windows Phone", "Windows Phone"
+        "LG G5", "LG G5", "LG G5", "HTC 10", "HTC 10", "HTC 10", "HTC 10",
+        "iPhone 7", "iPhone 7", "iPhone 7", "iPhone 7", "Nexus 5x",
+        "Nexus 5x", "Nexus 5x", "Nexus 5x", "Nexus 5x", "Nexus 5x"]
 
 try:
     print "Connecting to {}/{}".format(settings['host'], settings['database'])
